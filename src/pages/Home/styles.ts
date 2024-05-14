@@ -8,6 +8,8 @@ export const HomeContainer = styled.main`
   align-items: center;
   justify-content: center;
 
+  padding: 2rem 0;
+
   form {
     display: flex;
     flex-direction: column;
@@ -16,22 +18,27 @@ export const HomeContainer = styled.main`
 
     @media (max-width: 1440px) {
       gap: 3rem;
+      padding: 2rem 0;
     }
 
     @media (max-width: 1024px) {
       gap: 2.5rem;
+      padding: 1.5rem 0;
     }
 
     @media (max-width: 768px) {
       gap: 2rem;
+      padding: 1.25rem 0;
     }
 
     @media (max-width: 425px) {
       gap: 1.5rem;
+      padding: 1rem 0;
     }
 
     @media (max-width: 320px) {
       gap: 1rem;
+      padding: 0.75rem 0;
     }
   }
 `
@@ -95,6 +102,10 @@ const BaseInput = styled.input`
 
 export const TaskInput = styled(BaseInput)`
   width: 17rem;
+
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
 
   @media (max-width: 1440px) {
     width: 17rem;
