@@ -95,8 +95,16 @@ export function Home() {
 
     setActiveCycleId(id)
 
+    setAmountSecondsPassed(0)
+
     reset()
   }
+
+  useEffect(() => {
+    if (activeCycle) {
+      document.title = `${minutes}:${seconds}`
+    }
+  }, [minutes, seconds, activeCycle])
 
   return (
     <HomeContainer>
