@@ -45,8 +45,6 @@ export function CyclesContextProvider({
     {
       cycles: [],
       activeCycleId: null,
-      // activeCycle: undefined,
-      // amountSecondsPassed: 0,
     },
     (initialState: CyclesState) => {
       const storedStateAsJSON = localStorage.getItem(
